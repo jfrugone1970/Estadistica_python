@@ -25,7 +25,16 @@ def media(numero):
         # Para los numeros que se va a ingresar
         # dependiendo de los numeros
         valor = int(input(f"Ingrese valor del indica {cont} : ".format(cont)))
-        datos.append(valor)
+        # validar que el valor ingresado sea positvo
+        if valor<=0:
+            print()
+            print(f"Ingreso incorrecto debe ingresar numeros positivos {valor} : \n ", end="")
+            print()
+            valor = int(input(f"Ingrese valor del indice {cont} : ".format(cont)))
+            # Agrega valor al arreglo
+            datos.append(valor)
+        else:
+            datos.append(valor)
     # Para mostrar la media aritmetica de los numeros ingresados
     print()
     print("La media es : ", round(sum(datos)*1.0 / numero,2))
@@ -41,8 +50,15 @@ def moda(numero):
     # para el total de valores
     for cont in range(0,numero):
         valor = int(input(f"Ingrese valor de la posicion {cont} de este numero : ".format(cont)))
-        
-        datos.append(valor)
+        # validar el valor ingresado
+        if valor<=0:
+            print()
+            print(f"Ingreso incorrecto debe ingresar numeros positivos {valor} : \n", end="")
+            print()
+            valor = int(input(f"Ingrese valor de la posicion {cont} de este numero : ".format(cont)))
+            datos.append(valor)
+        else:
+            datos.append(valor)     
     # Para mostrar la moda
     # de un conjunto de numeros
     print()
@@ -61,7 +77,14 @@ def mediana(numero):
     for cont in range(0,numero):
         # Para la mediana
         valor = int(input(f"Ingrese valor de la posicion {cont} de este numero : ".format(cont)))
-        datos.append(valor)
+        if valor<=0:
+            print()
+            print(f"Ingreso incorrecto debe ingresar numeros positivos {valor} : \n", end="")
+            print()
+            valor = int(input(f"Ingrese valor de la posicion {cont} de este numero : ".format(cont)))
+            datos.append(valor)
+        else:
+            datos.append(valor)
     # Para mostrar la mediana
     print()
     print("La mediana es : " , stats.median(datos))
@@ -78,36 +101,45 @@ def media_arm(numero):
     for cont in range(0,numero):
         # Para la Media Armonica
         valor = int(input(f"Ingrese valor de posicion {cont} de este numero : ".format(cont)))
-        datos.append(valor)
+        if valor<=0:
+            print()
+            print(f"Ingreso incorrecto debe ingresar numeros postivos {valor} : \n", end="")
+            print()
+            valor = int(input(f"Ingrese valor de la posicion {cont} de este numero : ".fotmat(cont)))
+            datos.append(valor)
+        else:
+            datos.append(valor)
     # Para mostrar la Media Armonica
     print()
     print("La media Armonica es : " , stats.harmonic_mean(datos))
-# Fin del proceso    
-print()
-print("Programa para calcular los calculos Estadisticos \n", end="")
-print("Realizado por el Lcdo Jose Fernando Frugone Jaramillo \n", end="")
-print()
-opcion = 0
-print("1.- Media Aritmetica \n", end="")
-print("2.- Moda \n", end="")
-print("3.- Mediana \n", end="")
-print("4.- Media Armonica \n", end="")
-print("5.- Salir \n", end="")
-print()          
-opcion = int(input('Ingrese una opcion  (1/5) : '))
-if opcion==1:
-   num_veces = int(input('Ingrese el numero de veces a ingresar : '))
-   media(num_veces)
-elif opcion==2:
-   num_veces = int(input('Ingrese el numero de veces a ingresar : '))
-   moda(num_veces)
-elif opcion==3:
-    num_veces = int(input('Ingrese el numero de veces a ingresar : '))
-    mediana(num_veces)
-elif opcion==4:
-    num_veces = int(input('Ingrese el numero de veces a ingresar : '))
-    media_arm(num_veces)
-else:
+# Fin del proceso
+while True:
     print()
-    print("Termino el programa \n", end="")
+    print("Programa para calcular los calculos Estadisticos \n", end="")
+    print("Realizado por el Lcdo Jose Fernando Frugone Jaramillo \n", end="")
     print()
+    opcion = 0
+    print("1.- Media Aritmetica \n", end="")
+    print("2.- Moda \n", end="")
+    print("3.- Mediana \n", end="")
+    print("4.- Media Armonica \n", end="")
+    print("5.- Salir \n", end="")
+    print()
+    opcion = int(input('Ingrese una opcion  (1/5) : '))
+    if opcion==1:
+        num_veces = int(input('Ingrese el numero de veces a ingresar : '))
+        media(num_veces)
+    elif opcion==2:
+        num_veces = int(input('Ingrese el numero de veces a ingresar : '))
+        moda(num_veces)
+    elif opcion==3:
+        num_veces = int(input('Ingrese el numero de veces a ingresar : '))
+        mediana(num_veces)
+    elif opcion==4:
+        num_veces = int(input('Ingrese el numero de veces a ingresar : '))
+        media_arm(num_veces)
+    else:
+        print()
+        print("Termino el programa \n", end="")
+        break
+
