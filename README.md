@@ -1,6 +1,12 @@
 # Estadistica_python
 Repositorio donde muestra las funciones Estadisticas en Python
 
+<p align="center">
+
+  <img src = "python.png" />
+
+</p>
+
 Mediante este repositorio se va a explicar el uso de funciones definidas por el usuario y las funciones estadísticas que podemos usar en Python, que  en donde primeramente Python lo podemos descargar para instalar en la computadora desde el siguiente link o enlace:
 https://www.python.org/
 
@@ -13,6 +19,12 @@ Para hablar de las funciones tenemos el siguiente link o enlace:
 https://docs.python.org/3/tutorial/controlflow.html#defining-functions
 
 En el presente programa calculamos  la media aritmetica,  la moda, la mediana,  y la media armonica
+
+<p align="center">
+
+  <img src = "Estadistica1.png" />
+
+</p>
 
 Codigo para Media
 
