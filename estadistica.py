@@ -94,7 +94,7 @@ print("3.- Mediana \n", end="")
 print("4.- Media Armonica \n", end="")
 print("5.- Salir \n", end="")
 print()          
-opcion = int(input('Ingrese una opcion  (1/4) : '))
+opcion = int(input('Ingrese una opcion  (1/5) : '))
 if opcion==1:
    num_veces = int(input('Ingrese el numero de veces a ingresar : '))
    media(num_veces)
